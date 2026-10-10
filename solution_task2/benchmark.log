@@ -1,0 +1,15 @@
+N=1000 Quick iterative... 0.19069 ms; OK
+N=1000 Quick Hoare recursive... 0.153396 ms; OK
+N=1000 Insertion... 0.304243 ms; OK
+N=10000 Quick iterative... 1.55646 ms; OK
+N=10000 Quick Hoare recursive... 1.61327 ms; OK
+N=10000 Insertion... 30.2131 ms; OK
+N=100000 Quick iterative... 17.0361 ms; OK
+N=100000 Quick Hoare recursive... 18.6633 ms; OK
+N=100000 Insertion... 2144.24 ms; OK
+N=500000 Quick iterative... 75.1289 ms; OK
+N=500000 Quick Hoare recursive... 76.6545 ms; OK
+N=500000 Insertion... 53450 ms; OK
+N=1000000 Quick iterative... 155.77 ms; OK
+N=1000000 Quick Hoare recursive... 160.948 ms; OK
+N=1000000 Insertion... 217689 ms; OK
