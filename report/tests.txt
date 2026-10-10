@@ -1,0 +1,5 @@
+PASS: 750 values, range, bin boundaries, total frequency
+PASS: invalid and occupied cells rejected
+PASS: four is not a win; five in four directions; six at edge
+PASS: drawn board; computer fills the only free cell
+PASS: interactive validation, turn preserved, computer turn, scripted X victory, full drawn game
