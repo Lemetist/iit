@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram name="1. Сортировка вставками" id="page0">
+    <mxGraphModel dx="1200" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Сортировка вставками — insertion(a, n)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;text;strokeColor=none;fillColor=none;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="700" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="start" value="Начало: массив a, длина n" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="330" y="100" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="i = 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="outer" value="i &lt; n?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="330" y="300" width="240" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="save" value="x = a[i]&#10;j = i − 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="450" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="inner" value="j ≥ 0 и a[j] &gt; x?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="330" y="560" width="240" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="shift" value="a[j + 1] = a[j]&#10;j = j − 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="580" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="insert" value="a[j + 1] = x" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="730" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="inc" value="i = i + 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="840" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" value="Конец: массив отсортирован" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="30" y="320" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="start" target="init">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="init" target="outer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="outer" target="save">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="outer" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="save" target="inner">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="inner" target="shift">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="shift" target="inner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="520"/>
+              <mxPoint x="450" y="520"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="inner" target="insert">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="insert" target="inc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="inc" target="outer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="870"/>
+              <mxPoint x="290" y="350"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="figure-caption" value="Рисунок 1 — Сортировка вставками" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="30" y="950" width="840" height="60" as="geometry"/></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Метод Хоара" id="page1">
+    <mxGraphModel dx="1200" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="950" pageHeight="1190" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Рекурсивная сортировка — hoare(a, left, right)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;text;strokeColor=none;fillColor=none;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="70" y="20" width="820" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="recursive_sort(a, n) вызывает hoare(a, 0, n − 1).&#10;Разбиение partition показано на странице 4." style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;text;strokeColor=none;fillColor=none;align=left;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="150" y="80" width="650" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="start" value="Начало вызова hoare" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="350" y="180" width="250" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="check" value="left ≥ right?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="350" y="290" width="250" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="part" value="p = partition(a, left, right)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;shape=process;" vertex="1" parent="1">
+          <mxGeometry x="350" y="460" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="left" value="hoare(a, left, p)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;shape=process;" vertex="1" parent="1">
+          <mxGeometry x="350" y="610" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="right" value="hoare(a, p + 1, right)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;shape=process;" vertex="1" parent="1">
+          <mxGeometry x="350" y="760" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" value="Возврат из текущего вызова" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="350" y="940" width="250" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="start" target="check">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="check" target="part">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="check" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="345"/>
+              <mxPoint x="760" y="970"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="part" target="left">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="left" target="right">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="right" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      <mxCell id="figure-caption" value="Рисунок 2 — Быстрая сортировка методом Хоара" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="30" y="1050" width="890" height="60" as="geometry"/></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. Быстрая без рекурсии" id="page2">
+    <mxGraphModel dx="1200" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1540" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Быстрая сортировка без рекурсии — iterative_sort(a, n)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;text;strokeColor=none;fillColor=none;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="80" y="20" width="1040" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="start" value="Начало: массив a, длина n" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="460" y="100" width="280" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="Стек ls[64], rs[64]; top = 0&#10;left = 0; right = n − 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="210" width="280" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="while" value="left &lt; right?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="460" y="350" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="part" value="p = partition(a, left, right)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;shape=process;" vertex="1" parent="1">
+          <mxGeometry x="460" y="530" width="280" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="size" value="p − left &lt; right − p − 1?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="440" y="670" width="320" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="pushR" value="ls[top] = p + 1&#10;rs[top] = right&#10;top = top + 1&#10;right = p" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="890" width="290" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="pushL" value="ls[top] = left&#10;rs[top] = p&#10;top = top + 1&#10;left = p + 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="890" width="290" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="empty" value="top = 0?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="250" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="pop" value="top = top − 1&#10;left = ls[top]&#10;right = rs[top]" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" value="Конец: массив отсортирован" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="Разбиение partition показано на странице 4.&#10;В стек откладывается больший отрезок; меньший обрабатывается сразу." style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;text;strokeColor=none;fillColor=none;align=left;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1280" width="850" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="start" target="init">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="init" target="while">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="while" target="part">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="while" target="empty">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="empty" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="empty" target="pop">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="pop" target="while">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="620"/>
+              <mxPoint x="330" y="320"/>
+              <mxPoint x="600" y="320"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="part" target="size">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="size" target="pushR">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="740"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="size" target="pushL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="905" y="740"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="pushR" target="while">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="1120"/>
+              <mxPoint x="1120" y="1120"/>
+              <mxPoint x="1120" y="405"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="pushL" target="while">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="905" y="1160"/>
+              <mxPoint x="1150" y="1160"/>
+              <mxPoint x="1150" y="405"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="figure-caption" value="Рисунок 3 — Быстрая сортировка без рекурсии" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="30" y="1400" width="1140" height="60" as="geometry"/></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. Разбиение Хоара" id="page3">
+    <mxGraphModel dx="1200" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1050" pageHeight="1490" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Общее разбиение — partition(a, left, right)" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;text;strokeColor=none;fillColor=none;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="920" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="start" value="Начало: a, left, right" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="370" y="100" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="pivot = a[left + (right − left) / 2]&#10;i = left − 1; j = right + 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="210" width="300" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="inc" value="i = i + 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="370" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ci" value="a[i] &lt; pivot?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="370" y="490" width="300" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec" value="j = j − 1" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="680" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="cj" value="a[j] &gt; pivot?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="370" y="800" width="300" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="meet" value="i ≥ j?" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rhombus;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1000" width="300" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="end" value="Вернуть j" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="760" y="1020" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="swap" value="t = a[i]&#10;a[i] = a[j]&#10;a[j] = t" style="whiteSpace=wrap;html=0;fontFamily=Arial;fontSize=15;strokeColor=#000000;fillColor=#ffffff;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="1200" width="300" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="start" target="init">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="init" target="inc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="inc" target="ci">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="ci" target="inc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="545"/>
+              <mxPoint x="230" y="400"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ci" target="dec">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec" target="cj">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="cj" target="dec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="855"/>
+              <mxPoint x="230" y="710"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cj" target="meet">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="meet" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="meet" target="swap">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontFamily=Arial;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="swap" target="inc">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="1250"/>
+              <mxPoint x="90" y="340"/>
+              <mxPoint x="520" y="340"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="figure-caption" value="Рисунок 4 — Разбиение Хоара" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=16;strokeColor=none;fillColor=none;" vertex="1" parent="1"><mxGeometry x="30" y="1350" width="990" height="60" as="geometry"/></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
