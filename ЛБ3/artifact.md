@@ -1,0 +1,2 @@
+Reference: /home/lemetist/IT_T/ЛБ2/Отчёт.docx
+Cover paragraphs 0–25 retained; only laboratory number and topic changed. Section geometry, styles and all headers/footers retained. Body cloned from reference paragraph 27, headings 26/30, caption 44, image paragraph 43, code 121 and pseudocode 32. New content: graph figure and adjacency table. Original package parts preserved except document.xml, drawing relationships and new image. Render every page before delivery.
